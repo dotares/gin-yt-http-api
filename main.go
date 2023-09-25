@@ -1,9 +1,9 @@
 package main
 
 import (
-	"fmt"
+	r "api/server"
 )
 
 func main() {
-	fmt.Println("Hello world!")
+	r.Router();
 }
