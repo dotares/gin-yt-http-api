@@ -1,9 +1,9 @@
 package main
 
 import (
-	r "api/server"
+	initRouter "api/server"
 )
 
 func main() {
-	r.Router();
+	initRouter.Router();
 }
