@@ -5,6 +5,7 @@ import (
 	"io"
 	"log"
 	"net/http"
+	"regexp"
 )
 
 func DataFetch () {
@@ -22,5 +23,8 @@ func DataFetch () {
 		log.Fatal(err)
 	}
 
-	fmt.Println(string(body))
+	bodyString := string(body)
+
+	re := regexp.MustCompile("(?i)\\{\"videoRenderer\":\\{\"videoId\":\"[^\"]*\"")
+	fmt.Println("******************* regex match:", re.MatchString(bodyString));
 }
